@@ -1,31 +1,35 @@
 # Exasol Studio — install from the command line
 
-A Homebrew **tap** (macOS) and Scoop **bucket** (Windows) for Exasol Studio.
+One command each — no separate `brew tap` / `scoop bucket add` step.
 
-## macOS
+## macOS (Homebrew)
 
 ```sh
-brew tap sheetaldharshan200/tap https://github.com/Sheetaldharshan200/homebrew-tap
-brew install --cask exasol-studio
+brew install --cask sheetaldharshan200/tap/exasol-studio
 ```
 
-## Windows
+The fully-qualified name auto-adds this tap and installs, so `brew upgrade` works:
+
+```sh
+brew upgrade --cask exasol-studio      # update
+brew uninstall --cask exasol-studio    # remove (add --zap to delete app data)
+```
+
+## Windows (Scoop)
 
 ```powershell
-scoop bucket add exasol https://github.com/Sheetaldharshan200/homebrew-tap
-scoop install exasol-studio
+scoop install https://raw.githubusercontent.com/Sheetaldharshan200/homebrew-tap/HEAD/bucket/exasol-studio.json
+scoop update exasol-studio             # update
+scoop uninstall exasol-studio          # remove
 ```
-
-Upgrade: `brew upgrade --cask exasol-studio` · `scoop update exasol-studio`
-Remove:  `brew uninstall --cask exasol-studio` · `scoop uninstall exasol-studio`
 
 ### Don't have brew / scoop?
 
 - **Homebrew:** `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 - **Scoop:** `irm get.scoop.sh | iex`
-- Or just download the app directly from
+- Or download the app directly from
   [Releases](https://github.com/Sheetaldharshan200/Exasol-studio/releases/latest) — no tooling needed.
 
-> Demo build: not yet code-signed / notarized. The macOS cask strips the
-> download quarantine flag so it launches cleanly; on Windows, SmartScreen may
-> warn on first run (**More info → Run anyway**).
+> Demo build: not code-signed / notarized. The macOS cask strips the download
+> quarantine flag so it launches cleanly; on Windows, SmartScreen may warn on
+> first run (**More info → Run anyway**).
