@@ -1,33 +1,25 @@
 {
-    "version": "REPLACE_VERSION",
+    "version": "2026.0.4",
     "description": "Desktop Exasol client with a local database, AI assistant, and data tooling",
     "homepage": "https://github.com/Sheetaldharshan200/Exasol-studio",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Sheetaldharshan200/Exasol-studio/releases/download/vREPLACE_VERSION/ExasolStudio-Windows-64bit-setup.exe#/dl.exe",
-            "hash": "REPLACE_WIN_SHA256"
+            "url": "https://github.com/Sheetaldharshan200/Exasol-studio/releases/download/v2026.0.4/ExasolStudio-Windows-64bit-setup.exe#/dl.exe",
+            "hash": "0a3c91a5eb82d6c0ff0726ade2bbfa0a17ed93705acebd1579aef856950ce02b"
         }
     },
-    "installer": {
-        "script": [
-            "Start-Process -Wait -FilePath \"$dir\\dl.exe\" -ArgumentList '/S'"
-        ]
-    },
+    "installer": { "script": [ "Start-Process -Wait -FilePath \"$dir\\dl.exe\" -ArgumentList '/S'" ] },
     "uninstaller": {
         "script": [
             "$u = Get-ChildItem -Path \"$env:LOCALAPPDATA\\Exasol Studio\\uninstall.exe\" -ErrorAction SilentlyContinue",
             "if ($u) { Start-Process -Wait -FilePath $u.FullName -ArgumentList '/S' }"
         ]
     },
-    "checkver": {
-        "github": "https://github.com/Sheetaldharshan200/Exasol-studio"
-    },
+    "checkver": { "github": "https://github.com/Sheetaldharshan200/Exasol-studio" },
     "autoupdate": {
         "architecture": {
-            "64bit": {
-                "url": "https://github.com/Sheetaldharshan200/Exasol-studio/releases/download/v$version/ExasolStudio-Windows-64bit-setup.exe#/dl.exe"
-            }
+            "64bit": { "url": "https://github.com/Sheetaldharshan200/Exasol-studio/releases/download/v$version/ExasolStudio-Windows-64bit-setup.exe#/dl.exe" }
         }
     }
 }
