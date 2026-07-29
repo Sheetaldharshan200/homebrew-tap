@@ -1,12 +1,12 @@
 cask "exasol-studio" do
-  version "2026.0.4"
+  version "2026.0.7"
 
   on_arm do
-    sha256 "6d1bdaa033b8660c756c61b9ca38926ff9f2e9ae29b45d5ed118ac4b12361ac9"
+    sha256 "27adc8e20be3ae56ccad8acc6fa8624cfcd32fe6ee318f902cd864e415b5b130"
     url "https://github.com/Sheetaldharshan200/Exasol-studio/releases/download/v#{version}/ExasolStudio-Mac-AppleSilicon.dmg"
   end
   on_intel do
-    sha256 "cdfc227c1c4fc0f3ee86c538d2e87fd52f1522a55db1f7ab7daef65b2f132fb1"
+    sha256 "9cd949a21d46999a4a91a137c8254cadb4af5027d7811221f21b1c1ab35fdadc"
     url "https://github.com/Sheetaldharshan200/Exasol-studio/releases/download/v#{version}/ExasolStudio-Mac-Intel.dmg"
   end
 
