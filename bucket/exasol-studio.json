@@ -1,12 +1,12 @@
 {
-    "version": "2026.0.8",
+    "version": "2026.0.9",
     "description": "Desktop Exasol client with a local database, AI assistant, and data tooling",
     "homepage": "https://github.com/Sheetaldharshan200/Exasol-studio",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Sheetaldharshan200/Exasol-studio/releases/download/v2026.0.8/ExasolStudio-Windows-64bit-setup.exe#/dl.exe",
-            "hash": "e0d598fd542db6f41754b388023588060ebc23712d91e8f248b39bc2c9d69f7e"
+            "url": "https://github.com/Sheetaldharshan200/Exasol-studio/releases/download/v2026.0.9/ExasolStudio-Windows-64bit-setup.exe#/dl.exe",
+            "hash": "6405397bf9091fe91ae728ba3e381e4454b1c632ac090ca030ec95ec8c0f1ccd"
         }
     },
     "installer": { "script": [ "Start-Process -Wait -FilePath \"$dir\\dl.exe\" -ArgumentList '/S'" ] },
