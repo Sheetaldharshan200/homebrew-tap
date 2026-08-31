@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Sheetaldharshan200/Exasol-studio/releases/download/v2026.5.0/ExasolStudio-Windows-64bit-setup.exe#/dl.exe",
-            "hash": "061ccb9a9c5fc11443cd4e40f3d20d6a07ee9b11563a76bb737550db12a2f8cb"
+            "hash": "59ee0f8c6e814b8f7e4c58964513c26600ac30d8516c29237e793a5ddea9394a"
         }
     },
     "installer": { "script": [ "Start-Process -Wait -FilePath \"$dir\\dl.exe\" -ArgumentList '/S'" ] },
